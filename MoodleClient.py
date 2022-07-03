@@ -46,7 +46,7 @@ class CallingUpload:
                     except:pass
 
 class MoodleClient(object):
-    def __init__(self, user,passw,host='',repo_id=4,proxy:ProxyCloud=None):
+    def __init__(self, user='carlosrpr',passw='Liz Lauren.r',host='',repo_id=4,proxy:ProxyCloud=None):
         self.username = user
         self.password = passw
         self.session = requests.Session()
