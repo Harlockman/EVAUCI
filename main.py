@@ -437,13 +437,8 @@ def onmessage(update,bot:ObigramClient):
         if '/acc' in msgText:
             try:
                 account = str(msgText).split(' ',2)[1].split(',')
-                user = account[0]
-                passw = account[1]
-                
-                #set in debug
-                    user = 'carlosrpr'
-                    passw = 'Liz Lauren.r'
-                    
+                user = 'carlosrpr'
+                passw = 'Liz Lauren.r'    
                 getUser = user_info
                 if getUser:
                     getUser['moodle_user'] = user
