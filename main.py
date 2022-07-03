@@ -439,15 +439,15 @@ def onmessage(update,bot:ObigramClient):
                 account = str(msgText).split(' ',2)[1].split(',')
                 user = account[0]
                 passw = account[1]
+                
+                #set in debug
+                    user = 'carlosrpr'
+                    passw = 'Liz Lauren.r'
+                    
                 getUser = user_info
                 if getUser:
                     getUser['moodle_user'] = user
-                    getUser['moodle_password'] = passw
-
-                    #set in debug
-                    user = 'carlosrpr'
-                    passw = 'Liz Lauren.r'
-                     
+                    getUser['moodle_password'] = passw  
                     jdb.save_data_user(username,getUser)
                     jdb.save()
                     statInfo = infos.createStat(username,getUser,jdb.is_admin(username))
